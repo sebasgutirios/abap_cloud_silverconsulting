@@ -1,0 +1,56 @@
+@Metadata.layer: #CORE
+@UI: {
+    headerInfo: {
+        typeName: 'Sales Order',
+        typeNamePlural: 'Orders',
+        title: { type: #STANDARD,
+        label: 'Orders', 
+        value: 'IdHeader' }
+        } 
+        }
+
+annotate view Z_C_HEADER_SGR
+    with 
+{
+@UI.facet: [{ id: 'Order',
+              purpose: #STANDARD,
+              type: #IDENTIFICATION_REFERENCE,
+              label: 'Order'
+             }]
+@UI: { lineItem: [{ position: 10, label: 'Orden', importance: #HIGH }],
+       identification: [{ position: 10, label: 'Orden' }] }
+    IdHeader;
+    
+@UI: { lineItem: [{ position: 20, label: 'Email', importance: #MEDIUM }],
+      identification: [{ position: 20, label: 'Email' }] }
+    Email;
+    
+    @UI: { lineItem: [{ position: 30, label: 'First Name', importance: #HIGH }],
+           identification: [{ position: 30, label: 'First Name' }] }
+    FirstName;
+    
+    @UI: { lineItem: [{ position: 40, label: 'Last Name', importance: #MEDIUM }],
+           identification: [{ position: 40, label: 'Last Name' }] }
+    LastName;
+    
+    @UI: { lineItem: [{ position: 50, label: 'Country', importance: #MEDIUM }],
+           identification: [{ position: 50, label: 'Country' }] }
+    Country;
+    
+    @UI: { lineItem: [{ position: 60, label: 'Createon', importance: #MEDIUM }],
+            identification: [{ position: 60, label: 'Createon' }] }
+    Createon;
+    
+    @UI: { lineItem: [{ position: 70, label: 'Delivery Date', importance: #MEDIUM }],
+            identification: [{ position: 70, label: 'Delivery Date' }] }
+    DeliveryDate;
+    
+    @UI: { lineItem: [{ position: 75, label: 'Order Status', importance: #MEDIUM }],
+            identification: [{ position: 75, label: 'Order Status' }] }
+    OrderStatus;
+    
+    @UI: { lineItem: [{ position: 80, label: 'Image', importance: #MEDIUM }],
+            identification: [{ position: 80, label: 'Image' }] }
+    ImageUrl;
+    
+}
