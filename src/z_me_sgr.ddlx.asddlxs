@@ -53,4 +53,19 @@ annotate view Z_C_HEADER_SGR
             identification: [{ position: 80, label: 'Image' }] }
     ImageUrl;
     
-}
+    @UI.facet: [{ id: 'Items',
+              purpose: #STANDARD,
+              type: #LINEITEM_REFERENCE,
+              label: 'Items',
+              targetElement: '_Header' 
+             }]
+             
+      @UI: { 
+            lineItem: [
+            { position: 10, label: 'order id', importance: #HIGH },
+            { position: 10, label: 'Name', importance: #HIGH },
+            { position: 10, label: 'description', importance: #HIGH}
+            ]
+            }
+    _Header;
+     }

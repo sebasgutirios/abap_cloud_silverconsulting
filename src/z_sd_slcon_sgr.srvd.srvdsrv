@@ -1,4 +1,5 @@
 @EndUserText.label: 'SERVICE DEFINITION PROGRAM'
 define service Z_SD_SLCON_SGR {
   expose Z_C_HEADER_SGR as ServiceD;
+  expose Z_C_ITEM_SGR   as ITEMD;
 }

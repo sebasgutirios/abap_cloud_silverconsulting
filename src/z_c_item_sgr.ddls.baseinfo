@@ -3,12 +3,10 @@
 {
 "FROM":
 [
-"Z_I_HEADER_SGR"
+"Z_I_ITEM_SGR"
 ],
 "ASSOCIATED":
-[
-"Z_C_ITEM_SGR"
-],
+[],
 "BASE":
 [],
 "ANNO_REF":

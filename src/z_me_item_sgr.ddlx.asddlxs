@@ -1,0 +1,63 @@
+@Metadata.layer: #CORE
+@UI: {
+    headerInfo: {
+        typeName: 'Sales Order',
+        typeNamePlural: 'Orders',
+        title: { type: #STANDARD,
+        label: 'Orders', 
+        value: 'id_item' }
+        } 
+        }
+annotate view Z_C_ITEM_SGR
+    with 
+{
+@UI.facet: [{ id: 'Order',
+              purpose: #STANDARD,
+              type: #IDENTIFICATION_REFERENCE,
+              label: 'Order'
+             }]
+@UI: { lineItem: [{ position: 10, label: 'Id item', importance: #HIGH }],
+       identification: [{ position: 10, label: 'Id item' }] }
+id_item;
+
+@UI: { lineItem: [{ position: 20, label: 'Name', importance: #MEDIUM }],
+      identification: [{ position: 20, label: 'Name' }] }
+Name;
+
+    @UI: { lineItem: [{ position: 30, label: 'Description', importance: #HIGH }],
+           identification: [{ position: 30, label: 'Description' }] }
+Description;
+
+    @UI: { lineItem: [{ position: 40, label: 'Releasedate', importance: #MEDIUM }],
+           identification: [{ position: 40, label: 'Releasedate' }] }
+Releasedate;
+
+    @UI: { lineItem: [{ position: 50, label: 'Discontinueddate', importance: #MEDIUM }],
+           identification: [{ position: 50, label: 'Discontinueddate' }] }
+Discontinueddate;
+
+    @UI: { lineItem: [{ position: 60, label: 'Price', importance: #MEDIUM }],
+            identification: [{ position: 60, label: 'Price' }] }
+Price;
+
+    @UI: { lineItem: [{ position: 70, label: 'Height', importance: #MEDIUM }],
+            identification: [{ position: 70, label: 'Height' }] }
+Height;
+
+    @UI: { lineItem: [{ position: 75, label: 'Width', importance: #MEDIUM }],
+            identification: [{ position: 75, label: 'Width' }] }
+Width;
+
+    @UI: { lineItem: [{ position: 80, label: 'Depth', importance: #MEDIUM }],
+            identification: [{ position: 80, label: 'Depth' }] }
+Depth;
+
+    @UI: { lineItem: [{ position: 80, label: 'Quantity', importance: #MEDIUM }],
+            identification: [{ position: 80, label: 'Quantity' }] }
+Quantity;
+
+    @UI: { lineItem: [{ position: 80, label: 'Unitofmeasure', importance: #MEDIUM }],
+            identification: [{ position: 80, label: 'Unitofmeasure' }] }
+Unitofmeasure;
+    
+}
